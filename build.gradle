@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+}
+
+group = 'demonck'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation("net.java.dev.jna:jna-platform:5.9.0")
+}
+
+test {
+    useJUnitPlatform()
+}
+

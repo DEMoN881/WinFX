@@ -69,4 +69,4 @@ public class Main extends Application {
     }
 }
 ```
-![Example](https://github.com/DEMoN881/WinFX/blob/main/image.png?raw=true)
+![Example](https://raw.githubusercontent.com/DEMoN881/WinFX/main/imagesx.png)

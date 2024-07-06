@@ -83,7 +83,7 @@ public class Main extends Application {
         Scene scene = new Scene(root, 320, 240);
 
         stage.setTitle("Hello!");
-        stage.initStyle(StageStyle.UNIFIED); // unified mode
+        stage.initStyle(StageStyle.UNIFIED); // unified mode (if you only need a frame, leave it by default)
         stage.setScene(scene);
         stage.show();
         try {

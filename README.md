@@ -1,6 +1,6 @@
 # Windows DWM Library
 
-![Пример скриншота](https://github.com/DEMoN881/WinFX/blob/main/image.png?raw=true)
+![Example](https://github.com/DEMoN881/WinFX/blob/main/image.png?raw=true)
 
 
 ## Описание
@@ -19,38 +19,51 @@
 ## Примеры использования
 
 ```java
+
 import demonck.window.fx.windows.WindowsDWM10;
 import demonck.window.fx.windows.WindowsDWM11;
+import javafx.application.Application;
+import javafx.scene.Group;
 import javafx.scene.Scene;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class Main {
-    public static void main(String[] args) {
-        // Создание сцены и окна
-        Stage stage = new Stage();
-        Scene scene = new Scene(new Group(), 800, 600);
-        stage.setScene(scene);
+import java.util.Collection;
+import java.util.HashSet;
 
+public class Main extends Application {
+    @Override
+    public void start(Stage stage) {
+        
+        VBox root = new VBox();
+        Scene scene = new Scene(root, 320, 240);
+        
+        stage.setTitle("Hello!");
+        stage.setScene(scene);
+        stage.show();
         try {
-            // Установка темного режима
+            //Включения темного режима, чтобы отключить передайте в аргумент false \/ To turn on the dark mode, pass false to the argument
             WindowsDWM10.setUseImmersiveDarkMode(scene, true);
-            
-            // Установка цветов
+
+            // Установка цветов \/ Setting colors
             WindowsDWM10.setBorderColor(scene, "#FF0000");
             WindowsDWM10.setCaptionColor(scene, "#00FF00");
             WindowsDWM10.setTextColor(scene, "#0000FF");
-            
-            // Перерисовка окна
+
+            // Перерисовка окна (не обязательно) \/ Redrawing the window (optional)
             WindowsDWM10.redrawWindow(scene);
-            
-            // Пример использования методов для Windows 11
+
+            // Пример использования методов для Windows 11 \/ An example of using methods for Windows 11
             WindowsDWM11.setSystemBackdropType(scene, WindowsDWM11.SYSTEMBACKDROP_TYPE_ACRYLIC);
 
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
 
-        stage.show();
+    public static void main(String[] args) {
+        launch();
     }
 }
 
+![Example](https://github.com/DEMoN881/WinFX/blob/main/image.png?raw=true)

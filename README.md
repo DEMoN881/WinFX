@@ -70,3 +70,40 @@ public class Main extends Application {
 }
 ```
 ![Example](https://raw.githubusercontent.com/DEMoN881/WinFX/main/imagesx.png)
+
+```java
+    @Override
+    public void start(Stage stage) {
+
+        VBox root = new VBox();
+        Button button = new Button("cliiiiiiiiiiiiiiiiiick!");
+
+        root.getChildren().add(button);
+        root.setStyle("-fx-background-color: black;");
+        Scene scene = new Scene(root, 320, 240);
+
+        stage.setTitle("Hello!");
+        stage.initStyle(StageStyle.UNIFIED); // unified mode
+        stage.setScene(scene);
+        stage.show();
+        try {
+            //Включения темного режима, чтобы отключить передайте в аргумент false \/ To turn on the dark mode, pass false to the argument
+            WindowsDWM10.setUseImmersiveDarkMode(scene, true);
+
+            // Установка цветов \/ Setting colors
+            //WindowsDWM10.setBorderColor(scene, "#FF0000");
+            //WindowsDWM10.setCaptionColor(scene, "#00FF00");
+            WindowsDWM10.setTextColor(scene, "#0000FF");
+
+            // Перерисовка окна (не обязательно) \/ Redrawing the window (optional)
+            WindowsDWM10.redrawWindow(scene);
+
+            // Пример использования методов для Windows 11 \/ An example of using methods for Windows 11
+            WindowsDWM11.setSystemBackdropType(scene, WindowsDWM11.SYSTEMBACKDROP_TYPE_ACRYLIC);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+```
+![Example](https://github.com/DEMoN881/WinFX/blob/main/blurImage.png?raw=true)

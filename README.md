@@ -1,6 +1,6 @@
 # Windows DWM Library
 
-![Windows](https://img.shields.io/badge/Windows-10%20%26%2011-blue)
+![Windows]([https://img.shields.io/badge/Windows-10%20%26%2011-blue](https://github.com/DEMoN881/WinFX/blob/main/image.png?raw=true))
 
 ## Описание
 

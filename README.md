@@ -4,19 +4,22 @@
 
 
 ## Описание
+Эта библиотека позволяет взаимодействовать с окнами операционных систем Windows 10 и 11 с помощью нативных системы. С её помощью можно изменять фреймы окон, добавлять эффект размытия (blur) в Windows 11 и многое другое!
+Я планирую сделать библиотеку кроссплатформенной, если будет достаточно интереса. Пожалуйста, поддержите проект, нажав на звёздочку на GitHub  :). Ваше участие очень важно для меня!
+## Description
+This library allows you to interact with windows of Windows 10 and 11 operating systems using native systems. You can use it to change window frames, add a blur effect to Windows 11, and much more!
+I plan to make the library cross-platform if there is enough interest. Please support the project by clicking on the asterisk on GitHub :). Your participation is very important to me!
 
-Эта библиотека позволяет взаимодействовать с окнами операционных систем Windows 10 и 11 с помощью нативных методов Java. С её помощью можно изменять фреймы окон, добавлять эффект размытия (blur) в Windows 11 и многое другое!
+## Возможности \/ Opportunities
 
-## Возможности
+- Установка темного режима окна.\/ Setting the dark window mode.
+- Изменение цвета бордера окна.\/ Changing the color of the window border.
+- Изменение цвета заголовка окна.\/ Change the color of the window title.
+- Изменение цвета текста в рамке окна.\/ Change the color of the text in the window frame.
+- Перерисовка окна для применения изменений.\/ Redrawing the window to apply the changes.
+- Установка системного фона для Windows 11.\/ Installation of the system background for Windows 11.(blur)
 
-- Установка темного режима окна.
-- Изменение цвета бордера окна.
-- Изменение цвета заголовка окна.
-- Изменение цвета текста в рамке окна.
-- Перерисовка окна для применения изменений.
-- Установка системного фона для Windows 11.
-
-## Примеры использования
+## Примеры использования \/ Usage examples
 
 ```java
 
@@ -54,7 +57,7 @@ public class Main extends Application {
             WindowsDWM10.redrawWindow(scene);
 
             // Пример использования методов для Windows 11 \/ An example of using methods for Windows 11
-            WindowsDWM11.setSystemBackdropType(scene, WindowsDWM11.SYSTEMBACKDROP_TYPE_ACRYLIC);
+           // WindowsDWM11.setSystemBackdropType(scene, WindowsDWM11.SYSTEMBACKDROP_TYPE_ACRYLIC);
 
         } catch (Exception e) {
             e.printStackTrace();
@@ -65,5 +68,5 @@ public class Main extends Application {
         launch();
     }
 }
-
-![Example](https://github.com/DEMoN881/WinFX/blob/main/image.png?raw=true)
+```
+![Example]([https://github.com/DEMoN881/WinFX/blob/main/image.png?raw=true](https://github.com/DEMoN881/WinFX/blob/main/imagesx.png?raw=true))

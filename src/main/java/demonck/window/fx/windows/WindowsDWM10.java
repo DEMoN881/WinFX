@@ -4,8 +4,12 @@ import com.sun.jna.*;
 import com.sun.jna.platform.win32.*;
 import com.sun.jna.ptr.PointerByReference;
 import demonck.window.exceptions.WindowsDWM10Exception;
+import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+
+import java.util.Arrays;
+import java.util.List;
 
 
 public class WindowsDWM10 {
@@ -109,7 +113,7 @@ public class WindowsDWM10 {
 
     protected interface DwmApi extends Library {
         DwmApi INSTANCE = Native.load("dwmapi", DwmApi.class);
-
+        WinNT.HRESULT DwmExtendFrameIntoClientArea(WinDef.HWND hwnd, MARGINS margins);
         WinNT.HRESULT DwmSetWindowAttribute(WinDef.HWND hwnd, int dwAttribute, PointerByReference pvAttribute, NativeLong cbAttribute);
     }
 
@@ -151,7 +155,5 @@ public class WindowsDWM10 {
         }
         return hWnd;
     }
-
-
-
 }
+

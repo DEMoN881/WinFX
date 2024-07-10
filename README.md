@@ -4,10 +4,10 @@
 
 
 ## Описание
-Эта библиотека позволяет взаимодействовать с окнами операционных систем Windows 10 и 11 с помощью нативных системы. С её помощью можно изменять фреймы окон, добавлять эффект размытия (blur) в Windows 11 и многое другое!
+Эта библиотека позволяет взаимодействовать с окнами операционных систем Windows 10 и 11 с помощью нативных методов системы. С её помощью можно изменять фреймы окон, добавлять эффект размытия (blur) в Windows 11 и многое другое!
 Я планирую сделать библиотеку кроссплатформенной, если будет достаточно интереса. Пожалуйста, поддержите проект, нажав на звёздочку на GitHub  :). Ваше участие очень важно для меня!
 ## Description
-This library allows you to interact with windows of Windows 10 and 11 operating systems using native systems. You can use it to change window frames, add a blur effect to Windows 11, and much more!
+This library allows you to interact with windows of Windows 10 and 11 operating systems using native function systems. You can use it to change window frames, add a blur effect to Windows 11, and much more!
 I plan to make the library cross-platform if there is enough interest. Please support the project by clicking on the asterisk on GitHub :). Your participation is very important to me!
 
 ## Возможности \/ Opportunities

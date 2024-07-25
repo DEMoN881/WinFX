@@ -12,14 +12,12 @@ repositories {
 
 dependencies {
     implementation("net.java.dev.jna:jna-platform:5.9.0")
-    implementation("org.openjfx:javafx-controls:17")
-    implementation("org.openjfx:javafx-fxml:17")
-    implementation("org.openjfx:javafx-graphics:17") // Добавим модуль javafx-graphics
+
 
 }
 javafx {
     version = "17"
-    modules = [ 'javafx.controls', 'javafx.fxml', 'javafx.graphics' ] // Убедитесь, что все модули указаны
+    modules = [ 'javafx.controls', 'javafx.fxml', 'javafx.graphics' ]
 }
 test {
     useJUnitPlatform()

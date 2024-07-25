@@ -14,10 +14,10 @@ import java.util.List;
 
 public class WindowsDWM10 {
     // Атрибуты DWM
-    private static final int DWMWA_USE_IMMERSIVE_DARK_MODE = 20;
-    private static final int DWMWA_BORDER_COLOR = 34;
-    private static final int DWMWA_CAPTION_COLOR = 35;
-    private static final int DWMWA_TEXT_COLOR = 36;
+    protected static final int DWMWA_USE_IMMERSIVE_DARK_MODE = 20;
+    protected static final int DWMWA_BORDER_COLOR = 34;
+    protected static final int DWMWA_CAPTION_COLOR = 35;
+    protected static final int DWMWA_TEXT_COLOR = 36;
 
 
 
@@ -113,9 +113,11 @@ public class WindowsDWM10 {
 
     protected interface DwmApi extends Library {
         DwmApi INSTANCE = Native.load("dwmapi", DwmApi.class);
-        WinNT.HRESULT DwmExtendFrameIntoClientArea(WinDef.HWND hwnd, MARGINS margins);
+
         WinNT.HRESULT DwmSetWindowAttribute(WinDef.HWND hwnd, int dwAttribute, PointerByReference pvAttribute, NativeLong cbAttribute);
+
     }
+
 
     protected static boolean SUCCEEDED(WinNT.HRESULT hr) {
         return hr.longValue() >= 0;
@@ -155,5 +157,7 @@ public class WindowsDWM10 {
         }
         return hWnd;
     }
+
+
 }
 
